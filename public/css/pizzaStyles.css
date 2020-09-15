@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body::before{
+    content: none;
+}
+
+body {
+    padding: 0 50px;
+    margin:  15px auto;
+}
+
+img {
+    width: 35%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 24px;
+}

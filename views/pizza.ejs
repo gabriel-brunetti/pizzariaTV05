@@ -1,0 +1,11 @@
+<%- include('parts/head', {title:'Pizzaria Fantastica', css: 'rel=stylesheet type=text/css href=/css/pizzaStyles.css'}); %>
+    <h1><%= pizza.nome %></h1>
+    <h2><%= (pizza.preco.toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })).replace('.',',') %></h2>
+    <img src="<%= pizza.img %>" alt="<%= pizza.nome %>">
+    <ul>
+        <% for(let ingrediente of pizza.ingredientes){ %>
+           <li><%= ingrediente %></li>
+           <% } %> 
+    </ul>
+
+<%- include('parts/footer'); %>
