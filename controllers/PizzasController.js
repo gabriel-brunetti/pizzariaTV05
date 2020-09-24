@@ -17,5 +17,25 @@ module.exports = {
         } else {
             res.render("erros/pizzaNaoEncontrada")
         }
+    },
+    create: (req,res) => {
+        // exibir o formulário para o usuário
+        res.render("create")
+    },
+    store: (req ,res) => {
+        let pizza = req.body;
+        // adicionando imagem e destaque;
+        pizza.img = "/img/fracatu.jpg";
+        pizza.destaque = true;
+
+        // determinando o id da nova pizza
+        let novoId = (pizzas[pizzas.length - 1].id) + 1
+        // salvando o id da nova pizza
+        pizza.id = novoId;
+
+        // adicionando a pizza cadastrada ao json de pizzas
+        pizzas.push(pizza);
+
+        res.redirect('/');
     }
 }

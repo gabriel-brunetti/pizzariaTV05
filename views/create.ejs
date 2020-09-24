@@ -1,0 +1,15 @@
+<%- include('parts/head', {title:'Pizzaria Fantastica', css: 'rel=stylesheet type=text/css href=/css/pizzaCreate.css'}); %>
+    <form action="/" method="POST">
+        <label for="nome">Nome da Pizza</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="ingredientes">Ingredientes (separados por vírgula)</label>
+        <input type="text" name="ingredientes" id="ingredientes">
+        
+        <label for="preco">Preço</label>
+        <input type="number" step=".10" name="preco" id="preco">
+        
+        <button type="submit">Cadastrar a Pizza</button>    
+    </form>
+
+<%- include('parts/footer'); %>

@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body::before{
+    content: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+	width: 50%;
+	background-color: transparent !important;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+form input{
+    width: 35%;
+	padding: 0px;
+	margin-bottom: 15px;
+	font-size: 1.5rem;
+	background-color: transparent;
+	border: solid 1px black;
+    margin-right: 5px;
+	transition: background-color 0.3s linear;
+}
+
+form label {
+    margin-right: 10px;
+}
+
+form input:focus{
+	outline: 3px solid rgb(255, 81, 0);
+	background-color: rgb(255,255,255) ;
+}
